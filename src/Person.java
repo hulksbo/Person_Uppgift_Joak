@@ -28,8 +28,10 @@ public class Person implements Comparable<Person> {
 
 	@Override
 	public int compareTo(Person o) {
-		
-		return 0;
+		if(efternamn.compareTo(o.efternamn) == 0) {
+			return förnamn.compareTo(o.förnamn);
+		}
+		return (efternamn.compareTo(o.efternamn));
 	}
 
 
