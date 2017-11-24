@@ -7,7 +7,9 @@ public class Person implements Comparable<Person> {
 	String efternamn;
 	
 	public Person(String fulltnamn){
-		
+		int idx = fulltnamn.lastIndexOf(' ');
+		this.efternamn = fulltnamn.substring(0, idx);
+		this.förnamn  = fulltnamn.substring(idx + 1);
 	}
 	
 	public String getFörnamn() {
